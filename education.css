@@ -1,0 +1,150 @@
+.voved{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: #b0cec6;
+    text-align: center;
+    line-height: 30px;
+    margin: 2% 0;
+}
+.voved iframe{
+    align-self: center;
+    border-radius: 10px;
+}
+.voved div {
+    width: 30%;
+    align-self: center;
+    text-align: center;
+    font-size: 20px;
+}
+.voved h2{
+    text-align: center;
+    color: #397c7c;
+}
+.voved1{
+    text-align: left;
+}
+.naslov{
+    width: 70%;
+    /*position: relative;*/
+    margin: 3% auto auto;
+}
+.naslov hr{
+    margin-bottom: 3%;
+}
+h1{
+    text-align: center;
+    color: #397c7c;
+    font-family: "Century Gothic", serif;
+    font-size: 40px;
+    border: 1px solid transparent;
+}
+.faks{
+    max-width: 300px;
+    border: 1px solid black;
+    height: 400px;
+    display: flex;
+}
+.faks p{
+    align-self: center;
+    margin: auto;
+}
+
+.podnaslovi{
+    text-align: center;
+    font-size: 20px;
+    color: #397c7c;
+    width: 50%;
+    margin-left: 25%;
+}
+
+/*CAROUSEL*/
+.carousel-wrapper {
+    height: 450px;
+    position: relative;
+    width: 800px;
+    display: block;
+    margin: 50px auto ;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+
+}
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+    display: none;
+}
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('images/education/kuzman1.jpg');
+    background-size: cover;
+}
+.item-2 {
+    background: url('images/education/kuzman2.jpg');
+    background-size: cover;
+}
+.item-3 {
+    background: url('images/education/kuzman3.jpg');
+    background-size: cover;
+}
+.item-4 {
+    background: url('images/education/kuzman4.jpg');
+    background-size: cover;
+}
+.item-5 {
+    background: url('images/education/kuzman5.jpg');
+    background-size: cover;
+}
+.item-6 {
+    background: url('images/education/kuzman6.jpg');
+    background-size: cover;
+}
+.item-1, .item-2, .item-3, .item-4, .item-5, .item-6{
+    border-radius: 10px;
+}
+
+*:target ~ .item-1{
+    opacity: 0;
+}
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 , #item-4:target~ .item-4, #item-5:target~ .item-5, #item-6:target~ .item-6{
+    z-index: 3;
+    opacity: 1;
+}
+
+@media (max-width: 500px) {
+    .voved {
+        flex-direction: column;
+    }
+}
+
+

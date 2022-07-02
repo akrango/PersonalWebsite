@@ -1,0 +1,237 @@
+.voved{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #b0cec6;
+    text-align: right;
+    line-height: 30px;
+}
+.voved > p{
+    width: 50%;
+    align-self: center;
+}
+.voved .zname p{
+    text-align: center;
+}
+.naslov{
+    width: 70%;
+    position: relative;
+    margin: 3% auto auto;
+}
+.naslov hr{
+    margin-bottom: 3%;
+}
+h1{
+    text-align: center;
+    color: #397c7c;
+    font-family: "Century Gothic", serif;
+    font-size: 40px;
+    border: 1px solid transparent;
+}
+.first{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    line-height: 30px;
+}
+.first .img{
+    width: 40%;
+}
+.img1{
+    display: flex;
+}
+.img img{
+    align-self: center;
+    object-position: center;
+}
+.intro{
+    text-align: center;
+    width: 40%;
+    align-self: center;
+}
+.intro1{
+    text-align: center;
+    width: 30%;
+    align-self: center;
+}
+.intro p, .intro1 p{
+    padding-top: 2%;
+}
+.first h2{
+    text-align: center;
+    color: #397c7c;
+}
+.first img, .third img, .second img{
+    border-radius: 10px;
+}
+
+.second{
+    margin: 3% 1% 0 1%;
+    display: flex;
+    justify-content: space-around;
+    line-height: 30px;
+}
+
+.second p{
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    padding: 2% 5% 0;
+}
+.second .text{
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    align-self: center;
+}
+.second .text .podnaslovi{
+    margin: auto;
+}
+.podnaslovi{
+    text-align: center;
+    font-size: 20px;
+    color: #397c7c;
+    width: 50%;
+    padding-left: 1%;
+
+}
+
+.third{
+    display: flex;
+    line-height: 30px;
+    justify-content: space-around;
+    margin-top: 5%;
+    flex-direction: row;
+}
+
+.romanija{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.romanija img{
+    align-self: center;
+}
+
+.sulina{
+    width: 60%;
+    text-align: justify;
+    margin-top: -0.5%;
+}
+.sulina p, .sulina .podnaslovi{
+    padding-top: 4%;
+}
+.sulina .link a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3c3c98;
+}
+
+.sulina a{
+    text-decoration: none;
+    color: #3c3c98;
+    font-weight:bold;
+    border: 1px solid #ab88e3;
+    background-color: #e4dcf5;
+    border-radius: 10px;
+    padding: 5px;
+}
+.sulina a:hover{
+    background-color: #3c3c98;
+    color: white;
+    position: relative;
+    top: -2px;
+}
+.podnaslovi1{
+    text-align: center;
+    font-size: 20px;
+    color: #397c7c;
+    padding: 2%;
+}
+
+/* CAROUSEL */
+.carousel-wrapper {
+    height: 400px;
+    position: relative;
+    width: 800px;
+    display: block;
+    margin: 50px auto ;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+
+}
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+    display: none;
+}
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('images/vlashki/ponikva1.jpg');
+    background-size: cover;
+}
+.item-2 {
+    background: url('images/vlashki/ponikva2.jpg');
+    background-size: cover;
+}
+.item-3 {
+    background: url('images/vlashki/ponikva3.jpg');
+    background-size: cover;
+}
+.item-4 {
+    background: url('images/vlashki/ponikva4.jpg');
+    background-size: cover;
+}
+.item-1, .item-2, .item-3, .item-4{
+    border-radius: 10px;
+}
+
+*:target ~ .item-1{
+    opacity: 0;
+}
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 , #item-4:target~ .item-4{
+    z-index: 3;
+    opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .third {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .first {
+        flex-direction: column;
+    }
+}

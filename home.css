@@ -1,0 +1,48 @@
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.text{
+    width: 50rem;
+    display: inline-block;
+    font-size: 20px;
+}
+.text h1{
+    text-align: center;
+    color: #397c7c;
+
+}
+hr{
+    background-color: #ab88ab;
+}
+.text p{
+    margin-top: 20px;
+    text-align: justify;
+}
+.text ul{
+    margin-left: 40px;
+    list-style: none;
+}
+.images{
+    width: 35rem;
+}
+
+.images .me{
+    background-image: url("images/circle1.png") ;
+    background-repeat: no-repeat;
+    padding-left: 200px;
+    width: 368px;
+    height: 479px;
+}
+@media (max-width: 500px) {
+    .details {
+        flex-direction: column;
+    }
+}
+
+f
+
